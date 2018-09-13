@@ -55,8 +55,9 @@ class App(MainWindow):
             self.set_statistic(self.lesson.get_lesson_stat())
             self.set_question(new_word)
             if is_first_question:
+                answer = self.practice.word.en_word if self.lesson.type_pr == 1 else self.practice.word.ru_word
                 if is_new_word:
-                    self.set_new_word()
+                    self.set_new_word(answer)
             else:
                 self.set_repeat()
 

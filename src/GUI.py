@@ -196,8 +196,8 @@ class MainWindow(Tk):
         self.lbl_result_msg["text"] = _("reiterate")
         self.lbl_result_msg["fg"] = clr_error
 
-    def set_new_word(self):
-        self.lbl_result_msg["text"] = _("lbl_new_word")
+    def set_new_word(self, answer):
+        self.lbl_result_msg["text"] = '%s: %s' % (_("lbl_new_word"), answer)
         self.lbl_result_msg["fg"] = clr_error
 
     def show_edit_word_btn(self, is_show):
